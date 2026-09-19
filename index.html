@@ -139,6 +139,534 @@ ul.exp-list .del{margin-inline-start:auto; color:var(--muted); background:none; 
 }
 .exp-total .amt{color:var(--blue); direction:ltr}
 .exp-empty{font-size:13.5px; color:var(--muted); padding:6px 0}
+/* taki */
+.taki-sub{font-size:13.5px; color:var(--muted); margin-bottom:12px}
+.taki-score{display:flex; align-items:center; justify-content:center; gap:18px; direction:ltr}
+.taki-side{text-align:center; min-width:80px}
+.taki-num{font-size:34px; font-weight:800; color:var(--blue); font-variant-numeric:tabular-nums; line-height:1.1}
+.taki-name{font-size:14px; font-weight:700; color:var(--muted); margin-top:2px}
+.taki-vs{font-size:22px; font-weight:800; color:var(--muted)}
+.taki-status{text-align:center; font-size:14px; font-weight:600; color:var(--red); margin:8px 0 0; min-height:20px}
+.taki-btns{display:flex; gap:10px; margin-top:12px}
+.taki-btn{
+  flex:1; min-height:64px; border:none; border-radius:16px; cursor:pointer;
+  font-family:inherit; font-size:17px; font-weight:800; color:#fff;
+  box-shadow:0 3px 0 rgba(0,0,0,.2); user-select:none; -webkit-tap-highlight-color:transparent;
+}
+.taki-btn:active{transform:translateY(2px); box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.taki-btn.omri{background:var(--blue)}
+.taki-btn.tomer{background:var(--amber); color:#5c3a05}
+.taki-hist-head{margin-top:16px; padding-top:10px; border-top:2px solid var(--line); font-weight:800; font-size:14.5px}
+ul.taki-list{list-style:none}
+ul.taki-list li{
+  display:flex; align-items:center; gap:8px; padding:9px 2px;
+  border-top:1px dashed var(--line); font-size:14.5px;
+}
+ul.taki-list .when{color:var(--muted); font-size:12.5px; font-variant-numeric:tabular-nums; margin-inline-start:auto; direction:ltr}
+ul.taki-list .del{color:var(--muted); background:none; border:none; font-size:16px; cursor:pointer}
+.taki-empty{font-size:13.5px; color:var(--muted); padding:6px 0}
+/* phrases */
+ul.phrases{list-style:none}
+ul.phrases li{padding:11px 2px; border-top:1px dashed var(--line)}
+ul.phrases li:first-child{border-top:none}
+ul.phrases .bv{font-weight:800; font-size:15.5px}
+ul.phrases .bv .pron{font-weight:500; color:var(--blue2); font-size:13.5px; margin-inline-start:8px}
+ul.phrases .he{font-size:14px; color:var(--muted)}
+footer{margin-top:34px; text-align:center; color:var(--muted); font-size:12.5px; line-height:1.8}
+@media (max-width:360px){
+  h1{font-size:27px}
+  .cd .num{font-size:22px}
+  .wx .t{font-size:13px}
+  .taki-num{font-size:28px}
+  .taki-btn{font-size:15.5px; min-height:58px}
+}
+</style>
+</head>
+<body>
+<div class="diamonds"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">Oktoberfest · Honeymoon</div>
+    <h1>מינכן, אהובים 🍺</h1>
+    <div class="sub">22–27 בספטמבר 2026 · La Mansion Vi Vadi, שוובינג</div>
+  </header>
+
+  <nav class="tabs">
+    <a href="#countdown">ספירה</a>
+    <a href="#plan">תוכנית</a>
+    <a href="#wx">מזג אוויר</a>
+    <a href="#mass">מאס 🍺</a>
+    <a href="#exp">הוצאות</a>
+    <a href="#taki">טאקי 🃏</a>
+    <a href="#phrases">מילון</a>
+  </nav>
+
+  <section id="countdown">
+    <h2><span class="dot"></span>ההמראה מתקרבת</h2>
+    <div class="card">
+      <div class="cd">
+        <div class="cell"><div class="num" id="cd-d">–</div><div class="lbl">ימים</div></div>
+        <div class="cell"><div class="num" id="cd-h">–</div><div class="lbl">שעות</div></div>
+        <div class="cell"><div class="num" id="cd-m">–</div><div class="lbl">דקות</div></div>
+        <div class="cell"><div class="num" id="cd-s">–</div><div class="lbl">שניות</div></div>
+      </div>
+      <div class="cd-note" id="cd-note">LY351 · שלישי 22.9, 15:45 מנתב״ג ← 18:50 מינכן</div>
+    </div>
+  </section>
+
+  <section id="plan">
+    <h2><span class="dot"></span>התוכנית, יום יום</h2>
+
+    <details class="day" data-date="2026-09-22">
+      <summary>
+        <div class="date"><b>22</b><i>שלישי</i></div>
+        <div class="ttl"><b>נוחתים ✈️</b><span>טיסה, איסוף של גיא ועדו, סביצ׳ה ליד המלון</span></div>
+        <div class="chev">▼</div>
+      </summary>
+      <div class="day-body"><ul>
+        <li><span class="time">12:07</span><span>רכבת מסבידור מרכז לנתב״ג (להיות בשדה עד 12:45)</span></li>
+        <li><span class="time">15:45</span><span>LY351 מטמינל 3 · כרטיסי צ׳ק-אין נפתחים כבר ביום שני 15:45</span></li>
+        <li><span class="time">18:50</span><span>נחיתה. אל על נוחתת ב־Hall F ליד T2 — שם גיא ועדו מחכים</span></li>
+        <li><span class="time">20:30</span><span>ארוחת ערב ב־Cevicheria Pez, Occamstr. 26 — ממש ליד המלון <span class="tag booked">מוזמן ✓</span></span></li>
+        <li><span class="note"></span><span>שלישי הוא יום משפחות בוויסן ומתרוקן אחרי 21:00 — אם נשאר כוח, בירה אחת ב־Hofbräu</span></li>
+      </ul></div>
+    </details>
+
+    <details class="day" data-date="2026-09-23">
+      <summary>
+        <div class="date"><b>23</b><i>רביעי</i></div>
+        <div class="ttl"><b>יום הוויסן הגדול 🍺</b><span>אוגוסטינר עם עדו — זה היום</span></div>
+        <div class="chev">▼</div>
+      </summary>
+      <div class="day-body"><ul>
+        <li><span class="time">11:30</span><span>להגיע לאוהלים — כ־25% מהמקומות נשארים בלי הזמנה בצהרי חול</span></li>
+        <li><span class="time">12:00</span><span>Augustiner-Festhalle — האוהל של המקומיים. מאס: €14.90</span></li>
+        <li><span class="time">15:30</span><span>שעות מתות עד 18:00 — זמן לנשום, לאכול חצי עוף (Hendl) או לקפוץ ל־Oide Wiesn</span></li>
+        <li><span class="time">18:00</span><span>חוזרים לאוהל לסבב ערב. בירה אחרונה 22:30</span></li>
+        <li><span class="note"></span><span>U6 משוובינג ל־Goetheplatz + 10 ד׳ הליכה · תיק עד 3 ליטר · מזומן על הכיס</span></li>
+      </ul></div>
+    </details>
+
+    <details class="day" data-date="2026-09-24">
+      <summary>
+        <div class="date"><b>24</b><i>חמישי</i></div>
+        <div class="ttl"><b>מינכן של המקומיים</b><span>עיר, גולשים בנהר, בירגארטן</span></div>
+        <div class="chev">▼</div>
+      </summary>
+      <div class="day-body"><ul>
+        <li><span class="time">10:00</span><span>בוקר רגוע — בוקר אחרי אוגוסטינר מחייב</span></li>
+        <li><span class="time">11:00</span><span>Marienplatz והקריליון ב־11:00, ואז שוק Viktualienmarkt לנשנושים</span></li>
+        <li><span class="time">14:00</span><span>הגן האנגלי — לראות גולשים על הגל של ה־Eisbach</span></li>
+        <li><span class="time">17:00</span><span>סבב ויסן שני עם עדו, או Biergarten רגוע בשוובינג</span></li>
+      </ul></div>
+    </details>
+
+    <details class="day" data-date="2026-09-25">
+      <summary>
+        <div class="date"><b>25</b><i>שישי</i></div>
+        <div class="ttl"><b>זמן זוגי ❤️</b><span>יום רגוע, ערב בקייזרגארטן</span></div>
+        <div class="chev">▼</div>
+      </summary>
+      <div class="day-body"><ul>
+        <li><span class="time">11:00</span><span>שוובינג שלכם — בתי קפה, בוטיקים ב־Hohenzollernstrasse</span></li>
+        <li><span class="time">16:00</span><span>מנוחה לפני הערב. שישי־ראשון זה ״סוף השבוע האיטלקי״ — הוויסן יהיה פקוק</span></li>
+        <li><span class="time">20:00</span><span>ארוחת ערב ב־Kaisergarten, Kaiserstr. 34 — בווארי בן 100 שנה, 12 ד׳ הליכה מהמלון <span class="tag booked">מוזמן ✓ 20:00–22:00</span></span></li>
+      </ul></div>
+    </details>
+
+    <details class="day" data-date="2026-09-26">
+      <summary>
+        <div class="date"><b>26</b><i>שבת</i></div>
+        <div class="ttl"><b>ארמון נימפנבורג 🏰</b><span>כרטיסים כבר בכיס</span></div>
+        <div class="chev">▼</div>
+      </summary>
+      <div class="day-body"><ul>
+        <li><span class="time">09:00</span><span>כניסה לארמון — 2 כרטיסי Kombi + אודיו־גייד, שולם מראש <span class="tag booked">נקנה ✓</span></span></li>
+        <li><span class="time">09:00</span><span>הארמון + מוזיאון המרכבות (Marstallmuseum) + הארמוניות בפארק</span></li>
+        <li><span class="time">13:00</span><span>צהריים באזור, ואחה״צ חופשי לשניכם</span></li>
+        <li><span class="note"></span><span>לא לשכוח: הכרטיסים לא ניתנים להחזרה — להגיע בזמן לחריץ של 09:00</span></li>
+      </ul></div>
+    </details>
+
+    <details class="day" data-date="2026-09-27">
+      <summary>
+        <div class="date"><b>27</b><i>ראשון</i></div>
+        <div class="ttl"><b>ביתה 🏠</b><span>טיסת צהריים לנתב״ג</span></div>
+        <div class="chev">▼</div>
+      </summary>
+      <div class="day-body"><ul>
+        <li><span class="time">08:00</span><span>צ׳ק-אאוט ויציאה לכיוון השדה — S1/S8 ממינכנר פרייהייט</span></li>
+        <li><span class="time">11:20</span><span>LY354 מינכן ← נתב״ג 15:00</span></li>
+        <li><span class="note"></span><span>אם קניתם מזכרות — שקית סופרמרקט גרמני עולה פחות מכל חנות בשדה</span></li>
+      </ul></div>
+    </details>
+  </section>
+
+  <section id="wx">
+    <h2><span class="dot"></span>מזג אוויר, מינכן</h2>
+    <div class="wx">
+      <div class="day"><div class="d">שלישי 22</div><div class="ic">☁️</div><div class="t">15° <span>/ 6°</span></div><div class="r">☂ 3%</div></div>
+      <div class="day"><div class="d">רביעי 23</div><div class="ic">⛅</div><div class="t">18° <span>/ 7°</span></div><div class="r">☂ 0%</div></div>
+      <div class="day"><div class="d">חמישי 24</div><div class="ic">🌦️</div><div class="t">17° <span>/ 8°</span></div><div class="r">☂ 20%</div></div>
+      <div class="day"><div class="d">שישי 25</div><div class="ic">🌫️</div><div class="t">20° <span>/ 9°</span></div><div class="r">☂ 12%</div></div>
+      <div class="day"><div class="d">שבת 26</div><div class="ic">☁️</div><div class="t">22° <span>/ 10°</span></div><div class="r">☂ 9%</div></div>
+      <div class="day"><div class="d">ראשון 27</div><div class="ic">☀️</div><div class="t">24° <span>/ 9°</span></div><div class="r">☂ 2%</div></div>
+    </div>
+    <div class="honest">תחזית מיום שבת 19.9 — כדאי להתעדכן שוב לפני הטיסה. ערבים קרים (6–10°): לקחת שכבה חמה לאוהלים.</div>
+  </section>
+
+  <section id="mass">
+    <h2><span class="dot"></span>מונה המאס</h2>
+    <div class="card">
+      <div class="mass">
+        <button class="stein" id="stein" aria-label="הוסף מאס">🍺</button>
+        <div class="mass-info">
+          <div><b id="mass-count">0</b> מאסות וסופרים</div>
+          <div class="est" id="mass-est">≈ €0 בבירה (מאס אוגוסטינר 2026: €14.90)</div>
+          <div class="milestone" id="mass-ms"></div>
+          <small><button class="link" id="mass-reset">איפוס המונה</button></small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="exp">
+    <h2><span class="dot"></span>הוצאות הטיול (€)</h2>
+    <div class="card">
+      <div class="exp-form">
+        <input type="text" id="exp-desc" placeholder="על מה?" maxlength="40">
+        <input type="number" id="exp-amt" placeholder="€" min="0" step="0.5">
+        <button id="exp-add">+</button>
+      </div>
+      <ul class="exp-list" id="exp-list"></ul>
+      <div class="exp-empty" id="exp-empty">עוד לא הוצאתם יורו. המאס הראשונה תתקן את זה.</div>
+      <div class="exp-total"><span>סה״כ</span><span class="amt" id="exp-total">€0</span></div>
+    </div>
+  </section>
+
+  <section id="taki">
+    <h2><span class="dot"></span>אליפות הטאקי 🃏</h2>
+    <div class="card">
+      <div class="taki-sub">הטבלה הרשמית של ירח הדבש. תומר נכנסת לטיול כאלופה מכהנת 👑</div>
+      <div class="taki-score">
+        <div class="taki-side"><div class="taki-num" id="taki-omri">0</div><div class="taki-name">עומרי</div></div>
+        <div class="taki-vs">:</div>
+        <div class="taki-side"><div class="taki-num" id="taki-tomer">0</div><div class="taki-name">תומר</div></div>
+      </div>
+      <div class="taki-status" id="taki-status"></div>
+      <div class="taki-btns">
+        <button class="taki-btn omri" id="taki-win-omri">עומרי ניצח 💪</button>
+        <button class="taki-btn tomer" id="taki-win-tomer">תומר ניצחה 👑</button>
+      </div>
+      <div class="taki-hist-head">משחקים אחרונים</div>
+      <ul class="taki-list" id="taki-list"></ul>
+      <div class="taki-empty" id="taki-empty">עוד אין משחקים. הקלפים מחכים בתיק.</div>
+    </div>
+  </section>
+
+  <section id="phrases">
+    <h2><span class="dot"></span>מילון בווארי מינימלי</h2>
+    <div class="card">
+      <ul class="phrases">
+        <li><div class="bv">Ein Maß, bitte!<span class="pron">אַיין מאס, בִּיטה</span></div><div class="he">מאס אחת, בבקשה. המשפט הכי חשוב בטיול.</div></li>
+        <li><div class="bv">Prost!<span class="pron">פְּרוֹסט</span></div><div class="he">לחיים! מסתכלים בעיניים בהגשה — אחרת שבע שנים של בירה פחוסה, לפי המקומיים.</div></li>
+        <li><div class="bv">Oans, zwoa, drei — g'suffa!<span class="pron">אוֹאַנס, צְבּוֹאַ, דְּרַיי — גְּזוּפָה</span></div><div class="he">אחת, שתיים, שלוש — שותים! הספירה הרשמית של כל שולחן.</div></li>
+        <li><div class="bv">Noch oans!<span class="pron">נוֹך אוֹאַנס</span></div><div class="he">עוד אחת! (להגיד בזהירות)</div></li>
+        <li><div class="bv">Servus<span class="pron">סֶרְווּס</span></div><div class="he">היי, ביי, ומה נשמע — הכל במילה אחת.</div></li>
+        <li><div class="bv">O'zapft is!<span class="pron">אוֹצַאפְּט אִיס</span></div><div class="he">״החבית נפתחה!״ — המשפט שפותח את כל הפסטיבל.</div></li>
+        <li><div class="bv">Brezn<span class="pron">בְּרֶצְן</span></div><div class="he">פרצל ענקית. הבסיס התזונתי של כל שולחן באוהל.</div></li>
+        <li><div class="bv">Wo geht's zur Wiesn?<span class="pron">ווֹה גֶייטס צוּר וִיזְן</span></div><div class="he">איך מגיעים לאוקטוברפסט? (ספוילר: ללכת אחרי הקהל)</div></li>
+        <li><div class="bv">I mog di<span class="pron">אִי מוֹג דִי</span></div><div class="he">אני אוהב/ת אותך. מיועד לבת הזוג, לא למלצרית שמביאה את השישייה.</div></li>
+        <li><div class="bv">Gemütlich<span class="pron">גְּמוּטְלִיךְ</span></div><div class="he">נעים, חמים, בדיוק כמו שצריך — המצב הנפשי הרשמי של בוואריה.</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    נבנה באהבה על ידי ראול 🤖<br>
+    הספירה לאחור, מונה המאס, הטאקי וההוצאות חיים במכשיר שלכם · התוכנית והתחזית הם סטילס מ־19.9<br>
+    מחירי בירה: מחירון אוקטוברפסט 2026 הרשמי של עיריית מינכן
+  </footer>
+</div>
+
+<script>
+// countdown
+var TAKEOFF = new Date('2026-09-22T15:45:00+03:00').getTime();
+var LAND = new Date('2026-09-22T18:50:00+02:00').getTime();
+function tick(){
+  var now = Date.now(), d=document.getElementById('cd-d'), h=document.getElementById('cd-h'),
+      m=document.getElementById('cd-m'), s=document.getElementById('cd-s'), note=document.getElementById('cd-note');
+  if(now < TAKEOFF){
+    var diff = TAKEOFF - now;
+    d.textContent = Math.floor(diff/864e5);
+    h.textContent = Math.floor(diff/36e5)%24;
+    m.textContent = Math.floor(diff/6e4)%60;
+    s.textContent = Math.floor(diff/1e3)%60;
+  } else if(now < LAND){
+    d.textContent='✈️'; h.textContent='ב'; m.textContent='או'; s.textContent='יר';
+    note.textContent='LY351 באוויר — נחיתה 18:50, Hall F';
+  } else {
+    d.textContent='🍺'; h.textContent='Pro'; m.textContent='s'; s.textContent='t!';
+    note.textContent='נחתתם. העיר שלכם עד ראשון 27.9';
+  }
+}
+tick(); setInterval(tick, 1000);
+
+// highlight today (Munich time)
+try{
+  var today = new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  document.querySelectorAll('details.day').forEach(function(el){
+    if(el.dataset.date === today){ el.classList.add('today'); el.open = true; }
+  });
+}catch(e){}
+
+// mass counter
+var MK='munichMass', PRICE=14.90;
+var mc=document.getElementById('mass-count'), me=document.getElementById('mass-est'), mm=document.getElementById('mass-ms');
+function massGet(){ return parseInt(localStorage.getItem(MK)||'0',10)||0; }
+function massRender(){
+  var n=massGet();
+  mc.textContent=n;
+  me.textContent='≈ €'+(n*PRICE).toFixed(2).replace(/\.00$/,'')+' בבירה (מאס אוגוסטינר 2026: €14.90)';
+  var ms='';
+  if(n===1)ms='הראשונה תמיד הכי טובה';
+  else if(n===2)ms='זוגיות, גם בבירה';
+  else if(n===3)ms='הוויסן בא לידי ביטוי';
+  else if(n===4)ms='המלצרית כבר מכירה אתכם';
+  else if(n===5)ms='חמישייה — מספר מכובד';
+  else if(n>=6&&n<8)ms='מתחילים להבין בווארית בלי תרגום';
+  else if(n>=8&&n<10)ms='אוגוסטינר גאה בכם';
+  else if(n>=10)ms='מכובד. באמת. אבל תשתו גם מים.';
+  mm.textContent=ms;
+}
+document.getElementById('stein').addEventListener('click',function(){
+  localStorage.setItem(MK, massGet()+1); massRender();
+});
+document.getElementById('mass-reset').addEventListener('click',function(){
+  if(confirm('לאפס את מונה המאס?')){ localStorage.setItem(MK,'0'); massRender(); }
+});
+massRender();
+
+// taki
+var TK='munichTaki';
+function takiGet(){ try{ return JSON.parse(localStorage.getItem(TK)||'[]'); }catch(e){ return []; } }
+function takiSet(v){ localStorage.setItem(TK, JSON.stringify(v)); }
+function takiWhen(ts){
+  try{
+    var d=new Date(ts);
+    var day=new Intl.DateTimeFormat('he-IL',{timeZone:'Europe/Berlin',day:'numeric',month:'numeric'}).format(d);
+    var hm=new Intl.DateTimeFormat('he-IL',{timeZone:'Europe/Berlin',hour:'2-digit',minute:'2-digit',hour12:false}).format(d);
+    return day+' · '+hm;
+  }catch(e){ return ''; }
+}
+function takiRender(){
+  var games=takiGet(), o=0, t=0, i;
+  for(i=0;i<games.length;i++){ if(games[i].w==='omri')o++; else t++; }
+  document.getElementById('taki-omri').textContent=o;
+  document.getElementById('taki-tomer').textContent=t;
+  var st='';
+  if(o+t>0){
+    if(o>t) st='רגע היסטורי: עומרי מוביל 📸 לתעד!';
+    else if(t>o) st=(t-o>=3)?'הפער גדל. איש לא הופתע 👑':'הכתר במקומו הרגיל 👑';
+    else st='שוויון — עומרי במרחק נגיעה מהסנסציה';
+  }
+  document.getElementById('taki-status').textContent=st;
+  var ul=document.getElementById('taki-list'); ul.innerHTML='';
+  for(i=games.length-1;i>=0;i--){
+    (function(idx){
+      var g=games[idx];
+      var li=document.createElement('li');
+      var who=document.createElement('span');
+      who.textContent = g.w==='omri' ? 'עומרי ניצח 💪' : 'תומר ניצחה 👑';
+      var when=document.createElement('span'); when.className='when'; when.textContent=takiWhen(g.t);
+      var del=document.createElement('button'); del.className='del'; del.textContent='✕'; del.setAttribute('aria-label','מחק');
+      del.addEventListener('click',function(){ var arr=takiGet(); arr.splice(idx,1); takiSet(arr); takiRender(); });
+      li.appendChild(who); li.appendChild(when); li.appendChild(del);
+      ul.appendChild(li);
+    })(i);
+  }
+  document.getElementById('taki-empty').style.display = games.length? 'none':'block';
+}
+function takiWin(w){ var arr=takiGet(); arr.push({w:w,t:Date.now()}); takiSet(arr); takiRender(); }
+document.getElementById('taki-win-omri').addEventListener('click',function(){ takiWin('omri'); });
+document.getElementById('taki-win-tomer').addEventListener('click',function(){ takiWin('tomer'); });
+takiRender();
+
+// expenses
+var EK='munichExpenses';
+function expGet(){ try{ return JSON.parse(localStorage.getItem(EK)||'[]'); }catch(e){ return []; } }
+function expSet(v){ localStorage.setItem(EK, JSON.stringify(v)); }
+function fmt(n){ return '€'+(Math.round(n*100)/100).toString().replace(/\.00$/,''); }
+function expRender(){
+  var items=expGet(), ul=document.getElementById('exp-list');
+  ul.innerHTML='';
+  var total=0;
+  items.forEach(function(it,i){
+    total+=it.a;
+    var li=document.createElement('li');
+    var desc=document.createElement('span'); desc.textContent=it.d;
+    var amt=document.createElement('span'); amt.className='amt'; amt.textContent=fmt(it.a);
+    var del=document.createElement('button'); del.className='del'; del.textContent='✕'; del.setAttribute('aria-label','מחק');
+    del.addEventListener('click',function(){ var arr=expGet(); arr.splice(i,1); expSet(arr); expRender(); });
+    li.appendChild(desc); li.appendChild(amt); li.appendChild(del);
+    ul.appendChild(li);
+  });
+  document.getElementById('exp-empty').style.display = items.length? 'none':'block';
+  document.getElementById('exp-total').textContent = fmt(total);
+}
+document.getElementById('exp-add').addEventListener('click',function(){
+  var d=document.getElementById('exp-desc'), a=document.getElementById('exp-amt');
+  var amt=parseFloat(a.value);
+  if(!d.value.trim() || isNaN(amt) || amt<=0) return;
+  var arr=expGet(); arr.push({d:d.value.trim(), a:amt}); expSet(arr);
+  d.value=''; a.value=''; expRender(); d.focus();
+});
+document.getElementById('exp-amt').addEventListener('keydown',function(e){ if(e.key==='Enter') document.getElementById('exp-add').click(); });
+expRender();
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>מינכן 22–27.9 · ירח הדבש שלכם</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f8f3e8; --card:#fffdf7; --ink:#26201a; --muted:#7a6f5e;
+  --blue:#1c4f8a; --blue2:#3a7bc0; --blue-soft:#e7eff9;
+  --amber:#e6a23c; --amber-soft:#fdf1dc; --red:#b23b2e;
+  --line:#e8dfcc; --radius:18px;
+}
+*{box-sizing:border-box; margin:0; padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Heebo',system-ui,-apple-system,sans-serif;
+  background:var(--paper); color:var(--ink);
+  overflow-x:hidden; line-height:1.5;
+}
+.diamonds{
+  height:14px;
+  background:
+    conic-gradient(from 45deg, var(--blue) 0 25%, #fff 0 50%, var(--blue) 0 75%, #fff 0) 0 0/20px 20px;
+  opacity:.9;
+}
+.wrap{max-width:520px; margin:0 auto; padding:0 14px 60px}
+header.hero{padding:26px 4px 10px; text-align:center}
+.kicker{font-size:13px; font-weight:600; letter-spacing:.06em; color:var(--blue); text-transform:uppercase}
+h1{font-size:32px; font-weight:800; line-height:1.15; margin:6px 0 2px}
+.sub{color:var(--muted); font-size:15px}
+nav.tabs{
+  position:sticky; top:0; z-index:10; display:flex; gap:6px;
+  background:rgba(248,243,232,.92); backdrop-filter:blur(8px);
+  padding:10px 14px; margin:0 -14px; overflow-x:auto; scrollbar-width:none;
+}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{
+  flex:0 0 auto; text-decoration:none; color:var(--blue); font-weight:600; font-size:13px;
+  background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 13px;
+}
+section{margin-top:26px}
+h2{font-size:20px; font-weight:800; margin-bottom:12px; display:flex; align-items:center; gap:8px}
+h2 .dot{width:9px; height:9px; border-radius:50%; background:var(--amber); flex:0 0 auto}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:16px; box-shadow:0 1px 3px rgba(60,45,15,.06);
+}
+/* countdown */
+.cd{display:flex; gap:8px; margin-top:12px; direction:ltr; justify-content:center}
+.cd .cell{flex:1; background:var(--blue-soft); border-radius:14px; padding:12px 4px; text-align:center}
+.cd .num{font-size:26px; font-weight:800; color:var(--blue); font-variant-numeric:tabular-nums}
+.cd .lbl{font-size:12px; color:var(--muted); margin-top:2px}
+.cd-note{text-align:center; margin-top:10px; font-size:13.5px; color:var(--muted)}
+/* weather */
+.wx{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+.wx .day{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px 6px; text-align:center}
+.wx .d{font-size:12px; color:var(--muted); font-weight:600}
+.wx .ic{font-size:22px; margin:4px 0 2px}
+.wx .t{font-size:14px; font-weight:700}
+.wx .t span{color:var(--muted); font-weight:500; font-size:12.5px}
+.wx .r{font-size:11.5px; color:var(--blue2); font-weight:600}
+.honest{font-size:12.5px; color:var(--muted); margin-top:8px}
+/* plan */
+details.day{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); margin-bottom:10px; overflow:hidden}
+details.day summary{
+  list-style:none; cursor:pointer; padding:14px 16px; display:flex; align-items:center; gap:12px;
+  -webkit-tap-highlight-color:transparent;
+}
+details.day summary::-webkit-details-marker{display:none}
+details.day .date{
+  flex:0 0 auto; width:46px; text-align:center; background:var(--amber-soft);
+  border-radius:12px; padding:6px 2px;
+}
+details.day .date b{display:block; font-size:17px; line-height:1.1}
+details.day .date i{font-style:normal; font-size:11px; color:var(--muted); font-weight:600}
+details.day .ttl{flex:1}
+details.day .ttl b{font-size:15.5px; display:block}
+details.day .ttl span{font-size:13px; color:var(--muted)}
+details.day .chev{flex:0 0 auto; color:var(--blue); font-size:13px; transition:transform .2s}
+details.day[open] .chev{transform:rotate(180deg)}
+details.day.today{border:2px solid var(--blue)}
+details.day.today .date{background:var(--blue-soft)}
+.day-body{padding:2px 16px 16px 16px}
+.day-body ul{list-style:none}
+.day-body li{
+  display:flex; gap:10px; padding:7px 0; border-top:1px dashed var(--line);
+  font-size:14.5px; align-items:baseline;
+}
+.day-body li:first-child{border-top:none}
+.day-body .time{flex:0 0 52px; font-weight:700; color:var(--blue); font-variant-numeric:tabular-nums; font-size:13.5px}
+.day-body .note{flex:0 0 52px}
+.tag{
+  display:inline-block; font-size:11px; font-weight:700; border-radius:999px; padding:2px 8px;
+  background:var(--blue-soft); color:var(--blue); margin-inline-start:6px; vertical-align:2px;
+}
+.tag.booked{background:#e5f4e8; color:#2e7d43}
+/* mass counter */
+.mass{display:flex; align-items:center; gap:16px}
+.stein{
+  flex:0 0 auto; width:96px; height:96px; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #ffd98a, var(--amber));
+  border:3px solid #c9822a; color:#5c3a05; font-size:34px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 3px 0 #c9822a; cursor:pointer; user-select:none; -webkit-tap-highlight-color:transparent;
+}
+.stein:active{transform:translateY(2px); box-shadow:0 1px 0 #c9822a}
+.mass-info{flex:1}
+.mass-info .est{font-size:13.5px; color:var(--muted); margin-top:2px}
+.mass-info .milestone{font-size:14px; font-weight:600; color:var(--red); margin-top:6px; min-height:20px}
+.mass small{display:block; margin-top:6px}
+button.link{background:none; border:none; color:var(--muted); font-size:12.5px; text-decoration:underline; cursor:pointer; font-family:inherit}
+/* expenses */
+.exp-form{display:flex; gap:8px; margin-bottom:10px}
+.exp-form input, .exp-form select{
+  font-family:inherit; font-size:15px; padding:10px 12px; border:1px solid var(--line);
+  border-radius:12px; background:#fff; color:var(--ink); min-width:0;
+}
+.exp-form input[type=text]{flex:1}
+.exp-form input[type=number]{width:76px; direction:ltr}
+.exp-form select{width:96px}
+.exp-form button{
+  flex:0 0 auto; background:var(--blue); color:#fff; border:none; border-radius:12px;
+  font-family:inherit; font-weight:700; font-size:15px; padding:0 16px; cursor:pointer;
+}
+ul.exp-list{list-style:none}
+ul.exp-list li{
+  display:flex; align-items:center; gap:8px; padding:9px 2px;
+  border-top:1px dashed var(--line); font-size:14.5px;
+}
+ul.exp-list .amt{font-weight:700; font-variant-numeric:tabular-nums; direction:ltr}
+ul.exp-list .del{margin-inline-start:auto; color:var(--muted); background:none; border:none; font-size:16px; cursor:pointer}
+.exp-total{
+  display:flex; justify-content:space-between; margin-top:10px; padding-top:10px;
+  border-top:2px solid var(--line); font-weight:800; font-size:16px;
+}
+.exp-total .amt{color:var(--blue); direction:ltr}
+.exp-empty{font-size:13.5px; color:var(--muted); padding:6px 0}
 /* phrases */
 ul.phrases{list-style:none}
 ul.phrases li{padding:11px 2px; border-top:1px dashed var(--line)}
